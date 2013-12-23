@@ -25,6 +25,7 @@ public class GetProductsInfoFromMerchantSite {
         clearancePagesUrls.add("http://www.aeropostale.com/family/index.jsp?categoryId=10869011&cp=3534618.3534619.3534626.3595055");
         clearancePagesUrls.add("http://www1.macys.com/shop/holiday-lane/sale-clearance?id=32175&edge=hybrid&cm_sp=us_hdr-_-kids-baby-sho");
         clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
+        clearancePagesUrls.add("http://shop.nordstrom.com/c/all-womens-sale?dept=8000001&origin=topnav");
 
         String pageURL;
 
@@ -34,6 +35,9 @@ public class GetProductsInfoFromMerchantSite {
             String specificImageElement = "";
             String specificDescElement = "";
             String specificPriceElement = "";
+            String imageAttribute = "";
+            String targetUrlAttribute = "";
+
             pageURL = "";
             pageURL = clearancePagesUrls.get(i);
             driver = new HtmlUnitDriver();
@@ -53,16 +57,29 @@ public class GetProductsInfoFromMerchantSite {
                 specificImageElement = "img.thumbnailMainImage";
                 specificDescElement = "div.shortDescription a";
                 specificPriceElement = "div.prices";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
             } else if (domain.contains("kohls")){
                 productMainElement = "ul[id='product-matrix'] li.product-small";
                 specificImageElement = "img.product-image";
                 specificDescElement = "h2 a";
                 specificPriceElement = "div.product-info";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
             } else if (domain.contains("aeropostale")){
                 productMainElement = "div[data-product-id]";
                 specificImageElement = "div.details-image img";
                 specificDescElement = "h4 a";
                 specificPriceElement = "ul.price";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+            } else if (domain.contains("nordstrom")){
+                productMainElement = "div.fashion-item";
+                specificImageElement = "img";
+                specificDescElement = "a.title";
+                specificPriceElement = "div.info";
+                imageAttribute = "data-original";
+                targetUrlAttribute = "href";
             } else {
                 System.out.println("==============================================================================");
                 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Unrecognized Domain: " + domain);
@@ -107,8 +124,8 @@ public class GetProductsInfoFromMerchantSite {
                     continue;
                 }
                 String desc = descElement.getText();
-                String targetUrl = descElement.getAttribute("href");
-                String imageUrl = imageElement.getAttribute("src");
+                String targetUrl = descElement.getAttribute(targetUrlAttribute);
+                String imageUrl = imageElement.getAttribute(imageAttribute);
 
                 System.out.println("===================================================================================");
                 System.out.println(j + ". Desc: " + desc);
