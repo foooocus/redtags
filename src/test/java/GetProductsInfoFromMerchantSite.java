@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
+import java.sql.Driver;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -26,6 +27,7 @@ public class GetProductsInfoFromMerchantSite {
         clearancePagesUrls.add("http://www1.macys.com/shop/holiday-lane/sale-clearance?id=32175&edge=hybrid&cm_sp=us_hdr-_-kids-baby-sho");
         clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
         clearancePagesUrls.add("http://shop.nordstrom.com/c/all-womens-sale?dept=8000001&origin=topnav");
+        clearancePagesUrls.add("http://oldnavy.gap.com/browse/category.do?cid=26061&mlink=5151,7479135,HP_LN_1_M&clink=7479135");
 
         String pageURL;
 
@@ -35,12 +37,14 @@ public class GetProductsInfoFromMerchantSite {
             String specificImageElement = "";
             String specificDescElement = "";
             String specificPriceElement = "";
+            String paginationElement = "";
             String imageAttribute = "";
             String targetUrlAttribute = "";
 
             pageURL = "";
             pageURL = clearancePagesUrls.get(i);
-            driver = new HtmlUnitDriver();
+            //driver = new HtmlUnitDriver();
+            driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             try{
             driver.get(pageURL);
@@ -50,13 +54,14 @@ public class GetProductsInfoFromMerchantSite {
                 System.out.println("==============================================================================");
                 continue;
             }
-            //Thread.sleep(5000);
+            Thread.sleep(5000);
             String domain = pageURL.split("\\.")[1];
             if (domain.contains("macys")){
                 productMainElement = "div.productThumbnail";
                 specificImageElement = "img.thumbnailMainImage";
                 specificDescElement = "div.shortDescription a";
                 specificPriceElement = "div.prices";
+                paginationElement = "div.pagination a.arrowRight";
                 imageAttribute = "src";
                 targetUrlAttribute = "href";
             } else if (domain.contains("kohls")){
@@ -80,6 +85,13 @@ public class GetProductsInfoFromMerchantSite {
                 specificPriceElement = "div.info";
                 imageAttribute = "data-original";
                 targetUrlAttribute = "href";
+            } else if (domain.contains("oldnavy") || domain.contains("gap") || domain.contains("bananarepublic") || domain.contains("piperlime") || domain.contains("athleta")){
+                productMainElement = "li.productCatItem";
+                specificImageElement = "img";
+                specificDescElement = "a.productItemName";
+                specificPriceElement = "span.priceDisplay";
+                imageAttribute = "productimagepath";
+                targetUrlAttribute = "href";
             } else {
                 System.out.println("==============================================================================");
                 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Unrecognized Domain: " + domain);
@@ -88,15 +100,9 @@ public class GetProductsInfoFromMerchantSite {
             }
 
             List<WebElement> productElements = null;
-            try{
-            productElements = driver.findElements(By.cssSelector(productMainElement));
-            } catch (Exception e){
-                System.out.println("==============================================================================");
-                System.out.println("Exception in getting products: " + e);
-                System.out.println("==============================================================================");
-                continue;
-            }
+            productElements = getAllDisplayedProductElements(driver, productMainElement);
             int noOfProductsDisplayed = productElements.size();
+
             System.out.println("");
             System.out.println("************************************************************************");
             System.out.println("Page URL: " + pageURL);
@@ -106,6 +112,10 @@ public class GetProductsInfoFromMerchantSite {
                 System.out.println("%%%%%%%%% Restarting as the products parsed = zero %%%%%%%%%%%%%%%%%%%");
                 continue;
             }
+
+            WebElement paginationArrow;
+            String nextPage;
+            int maxNoOfPagesPerUrl = 0;
 
             for (int j = 0 ; j < noOfProductsDisplayed ; j ++){
 
@@ -133,7 +143,24 @@ public class GetProductsInfoFromMerchantSite {
                 System.out.println(j + ". Image URL: " + imageUrl);
                 System.out.println(j + ". Target URL: " + targetUrl);
                 totalProductsParsed++;
+
+                if (paginationElement != ""){
+                    paginationArrow = driver.findElement(By.cssSelector(paginationElement));
+
+                    if (j == noOfProductsDisplayed - 1 && maxNoOfPagesPerUrl != 3){
+                        if (paginationArrow.isEnabled()){
+                            maxNoOfPagesPerUrl++;
+                            paginationArrow.click();
+                            Thread.sleep(5000);
+                            productElements = getAllDisplayedProductElements(driver, productMainElement);
+                            noOfProductsDisplayed = productElements.size();
+                            j = 0;
+                        }
+                    }
+                }
+
             }
+
             driver.quit();
         }
 
@@ -142,5 +169,21 @@ public class GetProductsInfoFromMerchantSite {
     System.out.println("****************************************");
 
     }
+
+    private static List<WebElement> getAllDisplayedProductElements(WebDriver driver, String productMainElement) {
+        List<WebElement> productElements = null;
+        try{
+            productElements = driver.findElements(By.cssSelector(productMainElement));
+        } catch (Exception e){
+            System.out.println("==============================================================================");
+            System.out.println("Exception in getting products: " + e);
+            System.out.println("==============================================================================");
+
+        }
+
+        return productElements;
+    }
+
+
 
 }
