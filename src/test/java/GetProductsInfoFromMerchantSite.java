@@ -1,4 +1,5 @@
 
+import au.com.bytecode.opencsv.CSVWriter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,12 +23,12 @@ public class GetProductsInfoFromMerchantSite {
 
         // clearance page urls
         List<String> clearancePagesUrls = new ArrayList<String>();
-        clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
-        clearancePagesUrls.add("http://www.aeropostale.com/family/index.jsp?categoryId=10869011&cp=3534618.3534619.3534626.3595055");
-        clearancePagesUrls.add("http://www1.macys.com/shop/holiday-lane/sale-clearance?id=32175&edge=hybrid&cm_sp=us_hdr-_-kids-baby-sho");
-        clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
+        //clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
+        //clearancePagesUrls.add("http://www.aeropostale.com/family/index.jsp?categoryId=10869011&cp=3534618.3534619.3534626.3595055");
+        //clearancePagesUrls.add("http://www1.macys.com/shop/holiday-lane/sale-clearance?id=32175&edge=hybrid&cm_sp=us_hdr-_-kids-baby-sho");
+        //clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
         clearancePagesUrls.add("http://shop.nordstrom.com/c/all-womens-sale?dept=8000001&origin=topnav");
-        clearancePagesUrls.add("http://oldnavy.gap.com/browse/category.do?cid=26061&mlink=5151,7479135,HP_LN_1_M&clink=7479135");
+        //clearancePagesUrls.add("http://oldnavy.gap.com/browse/category.do?cid=26061&mlink=5151,7479135,HP_LN_1_M&clink=7479135");
 
         String pageURL;
 
@@ -99,6 +100,14 @@ public class GetProductsInfoFromMerchantSite {
                 continue;
             }
 
+            // CSV write
+            Utils utils = new Utils();
+            String file = utils.createFileName("C:\\Personal\\ecommerce\\redtags\\ProductDataCSV\\");
+            CSVWriter writer = utils.createFileWriter(file);
+            String rowString;
+            String colNames = "post_type" + "#" + "post_status" + "#" + "post_title" + "#" + "post_content" + "#" + "post_category" + "#" + "product_title" + "#" + "pro_logo" + "#" + "regular_price" + "#" + "clearance_price" + "#" + "coupons" + "#" + "target_urls" + "#" + "extra_tag_line";
+            utils.writeToCsvFile(writer, colNames);
+
             List<WebElement> productElements = null;
             productElements = getAllDisplayedProductElements(driver, productMainElement);
             int noOfProductsDisplayed = productElements.size();
@@ -142,6 +151,14 @@ public class GetProductsInfoFromMerchantSite {
                 System.out.println(j + ". Prices: " + prices);
                 System.out.println(j + ". Image URL: " + imageUrl);
                 System.out.println(j + ". Target URL: " + targetUrl);
+
+                rowString = "post" + "#" + "publish" + "#" + desc + "#" + " " + "#" + "Tops" + "#" + desc + "#" + imageUrl + "#" + "33" + "#" + "23" + "#" + "FREE" + "#" + targetUrl + "#" + "Kohl's";
+                // write to CSV file
+
+                utils.writeToCsvFile(writer, rowString);
+
+
+
                 totalProductsParsed++;
 
                 if (paginationElement != ""){
@@ -162,6 +179,7 @@ public class GetProductsInfoFromMerchantSite {
             }
 
             driver.quit();
+            utils.closeWriter(writer);
         }
 
     System.out.println("****************************************");

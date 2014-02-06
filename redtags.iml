@@ -56,6 +56,34 @@
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: commons-jxpath:commons-jxpath:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.ini4j:ini4j:0.5.2" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/jexcelapi_2_6_12.zip!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/Downloads/jexcelapi_2_6_12.zip!/jexcelapi/docs" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/jexcelapi_2_6_12.zip!/jexcelapi/src" />
+          <root url="jar://$USER_HOME$/Downloads/jexcelapi_2_6_12.zip!/jexcelapi/build" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES />
+        <JAVADOC>
+          <root url="file://$USER_HOME$/Downloads/opencsv-2.3-src-with-libs/opencsv-2.3/doc/api" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Downloads/opencsv-2.3-src-with-libs/opencsv-2.3/src" />
+          <root url="file://$USER_HOME$/Downloads/opencsv-2.3-src-with-libs/opencsv-2.3/test" />
+          <root url="file://$USER_HOME$/Downloads/opencsv-2.3-src-with-libs/opencsv-2.3/examples" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="src" level="project" />
   </component>
 </module>
 
