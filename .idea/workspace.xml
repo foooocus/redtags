@@ -85,9 +85,9 @@
       <file leaf-file-name="GetProductsInfoFromMerchantSite.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="8" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.5661253" vertical-offset="249" max-vertical-offset="3604">
+            <state line="197" column="183" selection-start="10141" selection-end="10141" vertical-scroll-proportion="0.17028381" vertical-offset="3077" max-vertical-offset="4148">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#929#939#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,9 +96,9 @@
       <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="79" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="867">
+            <state line="17" column="81" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1550#1558#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,7 +107,7 @@
       <file leaf-file-name="GetProductsInfoAeropostale.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816">
+            <state line="16" column="51" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
               <folding />
             </state>
           </provider>
@@ -125,11 +125,11 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/GetProductsInfo.java" />
-        <option value="$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java" />
         <option value="$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java" />
         <option value="$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java" />
         <option value="$PROJECT_DIR$/src/test/java/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/Utils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils.java" />
         <option value="$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java" />
       </list>
@@ -167,7 +167,7 @@
     </ignored-problems>
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -178,105 +178,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redtags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -357,7 +259,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="redtags" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -519,9 +427,9 @@
     <recent_temporary>
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.GetProductsInfoFromMerchantSite" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GetProductsInfoKohls" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GetProductsInfoMacys" />
-        <item index="3" class="java.lang.String" itemvalue="Application.GetProductsInfoAeropostale" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GetProductsInfoAeropostale" />
+        <item index="2" class="java.lang.String" itemvalue="Application.GetProductsInfoKohls" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GetProductsInfoMacys" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -548,7 +456,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8338558" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61128527" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -559,7 +467,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24264705" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2633229" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7946708" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -613,7 +521,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="8" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="3298">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#929#939#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -643,7 +551,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="8" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="3298">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#929#939#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -673,7 +581,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="17" selection-start="4665" selection-end="4665" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="3264">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#929#939#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -703,7 +611,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="17" selection-start="4665" selection-end="4665" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="3264">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#929#939#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -733,7 +641,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="105" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2737">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#929#939#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -763,7 +671,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="96" selection-start="5794" selection-end="5794" vertical-scroll-proportion="0.0" vertical-offset="1560" max-vertical-offset="2567">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#929#939#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,16 +701,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="30" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="1088">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#929#939#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1455" selection-end="2371" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="935">
-          <folding />
-        </state>
+        <state line="27" column="0" selection-start="1455" selection-end="2371" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
@@ -828,9 +734,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1455" selection-end="2371" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="935">
-          <folding />
-        </state>
+        <state line="27" column="0" selection-start="1455" selection-end="2371" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
@@ -856,9 +760,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="884">
-          <folding />
-        </state>
+        <state line="20" column="8" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="884" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
@@ -884,9 +786,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="9" column="3" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
@@ -924,6 +824,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="81" selection-start="1919" selection-end="1929" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="850" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="799">
@@ -931,34 +836,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="81" selection-start="1919" selection-end="1929" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="731">
+        <state line="16" column="51" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="79" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="867">
+        <state line="17" column="81" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1550#1558#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="8" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.5661253" vertical-offset="249" max-vertical-offset="3604">
+        <state line="197" column="183" selection-start="10141" selection-end="10141" vertical-scroll-proportion="0.17028381" vertical-offset="3077" max-vertical-offset="4148">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#929#939#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -16,21 +16,40 @@ import java.util.concurrent.TimeUnit;
  */
 public class GetProductsInfoFromMerchantSite {
 
+    public static String TOPS = "Tops";
+    public static String JEANS = "Jeans";
+    public static String OUTERWEAR = "Outerwear";
+
     public static void main(String[] args) throws InterruptedException {
+
+
         System.setProperty("webdriver.chrome.driver", "C:/Users/mgdharmadas/IdeaProjects/chromedriver.exe");
         WebDriver driver;
         int totalProductsParsed = 0;
-
         // clearance page urls
-        List<String> clearancePagesUrls = new ArrayList<String>();
+        List<String[]> clearancePagesUrls = new ArrayList<String[]>();
+
+        String store1[] = new String[3];
+        String store2[] = new String[3];
+        String store3[] = new String[3];
+        store1[0] = "http://shop.nordstrom.com/c/all-womens-sale?dept=8000001&origin=topnav"; store1[1] = TOPS; store1[2] = "- - -";
+        store2[0] = "http://www1.macys.com/shop/holiday-lane/sale-clearance?id=32175&edge=hybrid&cm_sp=us_hdr-_-kids-baby-sho"; store2[1] = JEANS; store2[2] = "SALE";
+        store3[0] = "http://oldnavy.gap.com/browse/category.do?cid=26061&mlink=5151,7479135,HP_LN_1_M&clink=7479135#style=26062"; store3[1] = OUTERWEAR; store3[2] = "FREESHIP4U";
+
+        clearancePagesUrls.add(store1);
+        clearancePagesUrls.add(store2);
+        clearancePagesUrls.add(store3);
+
+
         //clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
         //clearancePagesUrls.add("http://www.aeropostale.com/family/index.jsp?categoryId=10869011&cp=3534618.3534619.3534626.3595055");
         //clearancePagesUrls.add("http://www1.macys.com/shop/holiday-lane/sale-clearance?id=32175&edge=hybrid&cm_sp=us_hdr-_-kids-baby-sho");
         //clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
-        clearancePagesUrls.add("http://shop.nordstrom.com/c/all-womens-sale?dept=8000001&origin=topnav");
         //clearancePagesUrls.add("http://oldnavy.gap.com/browse/category.do?cid=26061&mlink=5151,7479135,HP_LN_1_M&clink=7479135");
 
         String pageURL;
+        String category, coupon;
+        String domain;
 
         for (int i = 0; i < clearancePagesUrls.size(); i++){
             // web elements
@@ -43,7 +62,11 @@ public class GetProductsInfoFromMerchantSite {
             String targetUrlAttribute = "";
 
             pageURL = "";
-            pageURL = clearancePagesUrls.get(i);
+            category = "";
+            coupon = "";
+            pageURL = clearancePagesUrls.get(i)[0];
+            category = clearancePagesUrls.get(i)[1];
+            coupon = clearancePagesUrls.get(i)[2];
             //driver = new HtmlUnitDriver();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -56,7 +79,8 @@ public class GetProductsInfoFromMerchantSite {
                 continue;
             }
             Thread.sleep(5000);
-            String domain = pageURL.split("\\.")[1];
+            domain = "";
+            domain = pageURL.split("\\.")[1];
             if (domain.contains("macys")){
                 productMainElement = "div.productThumbnail";
                 specificImageElement = "img.thumbnailMainImage";
@@ -65,6 +89,7 @@ public class GetProductsInfoFromMerchantSite {
                 paginationElement = "div.pagination a.arrowRight";
                 imageAttribute = "src";
                 targetUrlAttribute = "href";
+                domain = "Macy's";
             } else if (domain.contains("kohls")){
                 productMainElement = "ul[id='product-matrix'] li.product-small";
                 specificImageElement = "img.product-image";
@@ -72,6 +97,7 @@ public class GetProductsInfoFromMerchantSite {
                 specificPriceElement = "div.product-info";
                 imageAttribute = "src";
                 targetUrlAttribute = "href";
+                domain = "Kohl's";
             } else if (domain.contains("aeropostale")){
                 productMainElement = "div[data-product-id]";
                 specificImageElement = "div.details-image img";
@@ -79,6 +105,7 @@ public class GetProductsInfoFromMerchantSite {
                 specificPriceElement = "ul.price";
                 imageAttribute = "src";
                 targetUrlAttribute = "href";
+                domain = "Aeropostale";
             } else if (domain.contains("nordstrom")){
                 productMainElement = "div.fashion-item";
                 specificImageElement = "img";
@@ -86,6 +113,7 @@ public class GetProductsInfoFromMerchantSite {
                 specificPriceElement = "div.info";
                 imageAttribute = "data-original";
                 targetUrlAttribute = "href";
+                domain = "Nordstrom";
             } else if (domain.contains("oldnavy") || domain.contains("gap") || domain.contains("bananarepublic") || domain.contains("piperlime") || domain.contains("athleta")){
                 productMainElement = "li.productCatItem";
                 specificImageElement = "img";
@@ -93,6 +121,17 @@ public class GetProductsInfoFromMerchantSite {
                 specificPriceElement = "span.priceDisplay";
                 imageAttribute = "productimagepath";
                 targetUrlAttribute = "href";
+                if (domain.contains("oldnavy")){
+                    domain = "Old Navy";
+                } else if (domain.contains("gap")){
+                    domain = "Gap";
+                } else if (domain.contains("bananarepublic")){
+                    domain = "Banana Republic";
+                } else if (domain.contains("piperlime")){
+                    domain = "PiperLime";
+                } else if (domain.contains("athleta")){
+                    domain = "Athleta";
+                }
             } else {
                 System.out.println("==============================================================================");
                 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Unrecognized Domain: " + domain);
@@ -107,6 +146,8 @@ public class GetProductsInfoFromMerchantSite {
             String rowString;
             String colNames = "post_type" + "#" + "post_status" + "#" + "post_title" + "#" + "post_content" + "#" + "post_category" + "#" + "product_title" + "#" + "pro_logo" + "#" + "regular_price" + "#" + "clearance_price" + "#" + "coupons" + "#" + "target_urls" + "#" + "extra_tag_line";
             utils.writeToCsvFile(writer, colNames);
+            String prices;
+            String[] bothPrices;
 
             List<WebElement> productElements = null;
             productElements = getAllDisplayedProductElements(driver, productMainElement);
@@ -131,7 +172,8 @@ public class GetProductsInfoFromMerchantSite {
                 WebElement productDetails = productElements.get(j);
                 WebElement imageElement = null;
                 WebElement descElement = null;
-                String prices = null;
+                prices = null;
+                bothPrices = null;
                 try {
                 imageElement = productDetails.findElement(By.cssSelector(specificImageElement));
                 descElement = productDetails.findElement(By.cssSelector(specificDescElement));
@@ -152,9 +194,9 @@ public class GetProductsInfoFromMerchantSite {
                 System.out.println(j + ". Image URL: " + imageUrl);
                 System.out.println(j + ". Target URL: " + targetUrl);
 
-                rowString = "post" + "#" + "publish" + "#" + desc + "#" + " " + "#" + "Tops" + "#" + desc + "#" + imageUrl + "#" + "33" + "#" + "23" + "#" + "FREE" + "#" + targetUrl + "#" + "Kohl's";
+                bothPrices = utils.returnPrices(prices);
+                rowString = "post" + "#" + "publish" + "#" + desc + "#" + " " + "#" + category + "#" + desc + "#" + imageUrl + "#" + bothPrices[0] + "#" + bothPrices[1] + "#" + coupon + "#" + targetUrl + "#" + domain;
                 // write to CSV file
-
                 utils.writeToCsvFile(writer, rowString);
 
 
