@@ -1,4 +1,5 @@
 
+import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.CSVWriter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,40 +17,34 @@ import java.util.concurrent.TimeUnit;
  */
 public class GetProductsInfoFromMerchantSite {
 
-    public static String TOPS = "Tops";
-    public static String JEANS = "Jeans";
-    public static String OUTERWEAR = "Outerwear";
-
     public static void main(String[] args) throws InterruptedException {
 
+        Utils utils = new Utils();
+        String file = "";
+        Boolean createNew = false;
+        file = "C:\\Personal\\ecommerce\\redtags\\ProductDataCSV\\CuratedProducts_03-02-2014_09-38-962.csv";
+        int maxPagesPerUrl = 1000;
+
+        String inpurUrlCsv = "C:\\Personal\\ecommerce\\redtags\\UrlCsvFile\\pageUrls.csv";
 
         System.setProperty("webdriver.chrome.driver", "C:/Users/mgdharmadas/IdeaProjects/chromedriver.exe");
         WebDriver driver;
         int totalProductsParsed = 0;
         // clearance page urls
-        List<String[]> clearancePagesUrls = new ArrayList<String[]>();
-
-        String store1[] = new String[3];
-        String store2[] = new String[3];
-        String store3[] = new String[3];
-        store1[0] = "http://shop.nordstrom.com/c/all-womens-sale?dept=8000001&origin=topnav"; store1[1] = TOPS; store1[2] = "- - -";
-        store2[0] = "http://www1.macys.com/shop/holiday-lane/sale-clearance?id=32175&edge=hybrid&cm_sp=us_hdr-_-kids-baby-sho"; store2[1] = JEANS; store2[2] = "SALE";
-        store3[0] = "http://oldnavy.gap.com/browse/category.do?cid=26061&mlink=5151,7479135,HP_LN_1_M&clink=7479135#style=26062"; store3[1] = OUTERWEAR; store3[2] = "FREESHIP4U";
-
-        clearancePagesUrls.add(store1);
-        clearancePagesUrls.add(store2);
-        clearancePagesUrls.add(store3);
-
-
-        //clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
-        //clearancePagesUrls.add("http://www.aeropostale.com/family/index.jsp?categoryId=10869011&cp=3534618.3534619.3534626.3595055");
-        //clearancePagesUrls.add("http://www1.macys.com/shop/holiday-lane/sale-clearance?id=32175&edge=hybrid&cm_sp=us_hdr-_-kids-baby-sho");
-        //clearancePagesUrls.add("http://www.kohls.com/catalog/clearance-kids-shoes.jsp?CN=4294736457+4294732649+4294719777");
-        //clearancePagesUrls.add("http://oldnavy.gap.com/browse/category.do?cid=26061&mlink=5151,7479135,HP_LN_1_M&clink=7479135");
+        CSVReader reader = utils.createFileReader(inpurUrlCsv);
+        List<String[]> clearancePagesUrls = utils.getAllRowsFromCsvFile(reader);
 
         String pageURL;
         String category, coupon;
         String domain;
+
+        // CSV write column headers
+        if (createNew){
+            file = utils.createFileName("C:\\Personal\\ecommerce\\redtags\\ProductDataCSV\\");
+        }
+        CSVWriter writer = utils.createFileWriter(file);
+        String colNames = "post_type" + "#" + "post_status" + "#" + "post_title" + "#" + "post_content" + "#" + "post_category" + "#" + "product_title" + "#" + "pro_logo" + "#" + "regular_price" + "#" + "clearance_price" + "#" + "coupons" + "#" + "target_urls" + "#" + "extra_tag_line";
+        utils.writeToCsvFile(writer, colNames);
 
         for (int i = 0; i < clearancePagesUrls.size(); i++){
             // web elements
@@ -78,7 +73,7 @@ public class GetProductsInfoFromMerchantSite {
                 System.out.println("==============================================================================");
                 continue;
             }
-            Thread.sleep(5000);
+            Thread.sleep(3000);
             domain = "";
             domain = pageURL.split("\\.")[1];
             if (domain.contains("macys")){
@@ -139,13 +134,8 @@ public class GetProductsInfoFromMerchantSite {
                 continue;
             }
 
-            // CSV write
-            Utils utils = new Utils();
-            String file = utils.createFileName("C:\\Personal\\ecommerce\\redtags\\ProductDataCSV\\");
-            CSVWriter writer = utils.createFileWriter(file);
+
             String rowString;
-            String colNames = "post_type" + "#" + "post_status" + "#" + "post_title" + "#" + "post_content" + "#" + "post_category" + "#" + "product_title" + "#" + "pro_logo" + "#" + "regular_price" + "#" + "clearance_price" + "#" + "coupons" + "#" + "target_urls" + "#" + "extra_tag_line";
-            utils.writeToCsvFile(writer, colNames);
             String prices;
             String[] bothPrices;
 
@@ -163,9 +153,8 @@ public class GetProductsInfoFromMerchantSite {
                 continue;
             }
 
-            WebElement paginationArrow;
-            String nextPage;
-            int maxNoOfPagesPerUrl = 0;
+            WebElement paginationArrow = null;
+            int maxNoOfPagesPerUrl = 1;
 
             for (int j = 0 ; j < noOfProductsDisplayed ; j ++){
 
@@ -196,17 +185,22 @@ public class GetProductsInfoFromMerchantSite {
 
                 bothPrices = utils.returnPrices(prices);
                 rowString = "post" + "#" + "publish" + "#" + desc + "#" + " " + "#" + category + "#" + desc + "#" + imageUrl + "#" + bothPrices[0] + "#" + bothPrices[1] + "#" + coupon + "#" + targetUrl + "#" + domain;
-                // write to CSV file
-                utils.writeToCsvFile(writer, rowString);
-
-
-
+                // write to CSV file if desc is not empty
+                if (desc != ""){
+                    utils.writeToCsvFile(writer, rowString);
+                }
+                // keep count of total products parsed
                 totalProductsParsed++;
-
+                Boolean needPage = true;
                 if (paginationElement != ""){
+                    try{
                     paginationArrow = driver.findElement(By.cssSelector(paginationElement));
+                    } catch (Exception e){
+                        System.out.print("********* Pagination End ******");
+                        needPage = false;
+                    }
 
-                    if (j == noOfProductsDisplayed - 1 && maxNoOfPagesPerUrl != 3){
+                    if (j == noOfProductsDisplayed - 1 && needPage && maxNoOfPagesPerUrl != maxPagesPerUrl){
                         if (paginationArrow.isEnabled()){
                             maxNoOfPagesPerUrl++;
                             paginationArrow.click();
@@ -219,10 +213,11 @@ public class GetProductsInfoFromMerchantSite {
                 }
 
             }
-
+            // close browser for that URL
             driver.quit();
-            utils.closeWriter(writer);
         }
+        // Close file once all URLs are parsed
+        utils.closeWriter(writer);
 
     System.out.println("****************************************");
     System.out.println("TOTAL PRODUCTS: " + totalProductsParsed);

@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -8,6 +9,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.CSVWriter;
 
 
@@ -15,15 +17,26 @@ public class Utils {
 
     public String createFileName (String dirPath){
         Date todaysDate = new Date();
-        SimpleDateFormat formattedDate = new SimpleDateFormat("MM-DD-YYYY_hh-mm-ss");
+        SimpleDateFormat formattedDate = new SimpleDateFormat("MM-dd-yyyy_HH-mm-SS");
         String fileName = "CuratedProducts_" + formattedDate.format(todaysDate);
         return dirPath + fileName + ".csv";
     }
 
     public CSVWriter createFileWriter (String fileName){
         try {
-            CSVWriter writer = new CSVWriter(new FileWriter(fileName));
+            CSVWriter writer = new CSVWriter(new FileWriter(fileName, true));
             return writer;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public CSVReader createFileReader (String fileName){
+        try {
+            CSVReader reader = new CSVReader(new FileReader(fileName));
+            return reader;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,6 +49,18 @@ public class Utils {
 
         String [] row = rowString.split("#");
         writer.writeNext(row);
+
+    }
+
+    public List<String[]> getAllRowsFromCsvFile (CSVReader reader){
+
+        List<String[]> rows = new ArrayList<String[]>();
+        try {
+            rows = reader.readAll();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return rows;
 
     }
 
@@ -77,12 +102,12 @@ public class Utils {
             return prices;
         } else if (priceArrayLength == 1) {
             prices[1] = totalPrices.get(0);
-            prices[0] = "XX";
+            prices[0] = "00";
             return prices;
         }
 
-        prices[0] = "XX";
-        prices[1] = "XX";
+        prices[0] = "00";
+        prices[1] = "00";
         return prices;
 
     }

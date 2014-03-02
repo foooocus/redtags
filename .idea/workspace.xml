@@ -64,31 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="23" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="680">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetProductsInfoKohls.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GetProductsInfoFromMerchantSite.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="183" selection-start="10141" selection-end="10141" vertical-scroll-proportion="0.17028381" vertical-offset="3077" max-vertical-offset="4148">
-              <folding>
-                <element signature="e#929#939#0" expanded="true" />
-              </folding>
+            <state line="69" column="34" selection-start="2777" selection-end="2777" vertical-scroll-proportion="0.029616725" vertical-offset="969" max-vertical-offset="4046">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,19 +76,10 @@
       <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="81" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
+            <state line="24" column="21" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
               <folding>
-                <element signature="e#1550#1558#0" expanded="true" />
+                <element signature="e#1518#1528#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetProductsInfoAeropostale.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="51" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -325,6 +296,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -350,19 +334,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -467,12 +438,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24264705" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7946708" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.79310346" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -498,9 +469,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -512,25 +481,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="8" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="3298">
-          <folding>
-            <element signature="e#929#939#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -542,25 +505,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="8" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="3298">
-          <folding>
-            <element signature="e#929#939#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -572,25 +529,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="17" selection-start="4665" selection-end="4665" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="3264">
-          <folding>
-            <element signature="e#929#939#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -602,25 +553,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="17" selection-start="4665" selection-end="4665" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="3264">
-          <folding>
-            <element signature="e#929#939#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -632,25 +577,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="105" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2737">
-          <folding>
-            <element signature="e#929#939#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -662,25 +601,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="96" selection-start="5794" selection-end="5794" vertical-scroll-proportion="0.0" vertical-offset="1560" max-vertical-offset="2567">
-          <folding>
-            <element signature="e#929#939#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="28" column="84" selection-start="1399" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -692,17 +625,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="30" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="1088">
-          <folding>
-            <element signature="e#929#939#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -713,9 +642,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -727,9 +654,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="82" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1003">
-          <folding />
-        </state>
+        <state line="45" column="82" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1003" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java">
@@ -739,9 +664,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -753,9 +676,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="21" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="29" column="21" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java">
@@ -765,9 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -779,9 +698,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="61" selection-start="1941" selection-end="1949" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="918">
-          <folding />
-        </state>
+        <state line="37" column="61" selection-start="1941" selection-end="1949" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="918" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoMacys.java">
@@ -791,9 +708,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="731">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="731" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -805,21 +720,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="23" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="867">
-          <folding />
-        </state>
+        <state line="27" column="23" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="867" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="10" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
@@ -831,33 +737,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoKohls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="39" column="67" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="51" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
+        <state line="16" column="51" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="81" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
+        <state line="24" column="21" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
           <folding>
-            <element signature="e#1550#1558#0" expanded="true" />
+            <element signature="e#1518#1528#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="23" selection-start="355" selection-end="355" vertical-scroll-proportion="0.055555556" vertical-offset="68" max-vertical-offset="680">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="183" selection-start="10141" selection-end="10141" vertical-scroll-proportion="0.17028381" vertical-offset="3077" max-vertical-offset="4148">
-          <folding>
-            <element signature="e#929#939#0" expanded="true" />
-          </folding>
+        <state line="69" column="34" selection-start="2777" selection-end="2777" vertical-scroll-proportion="0.029616725" vertical-offset="969" max-vertical-offset="4046">
+          <folding />
         </state>
       </provider>
     </entry>
