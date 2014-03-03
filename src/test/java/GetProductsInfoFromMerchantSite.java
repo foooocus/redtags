@@ -124,7 +124,7 @@ public class GetProductsInfoFromMerchantSite {
             } else if (domain.contains("urbanoutfitters")){
                 productMainElement = "div.category-product";
                 specificImageElement = "img";
-                specificDescElement = "h2";
+                specificDescElement = "h2 a";
                 specificPriceElement = "h3";
                 imageAttribute = "src";
                 targetUrlAttribute = "href";
@@ -133,8 +133,8 @@ public class GetProductsInfoFromMerchantSite {
             } else if (domain.contains("express")){
                 productMainElement = "div.cat-thu-product";
                 specificImageElement = "img.cat-thu-p-ima";
-                specificDescElement = "li.cat-cat-prod-name";
-                specificPriceElement = "span.cat-glo-tex-oldP";
+                specificDescElement = "li.cat-cat-prod-name a";
+                specificPriceElement = "ul.cat-cat-prod-info";
                 imageAttribute = "src";
                 targetUrlAttribute = "href";
                 paginationElement = "a[title='next']";
@@ -142,7 +142,7 @@ public class GetProductsInfoFromMerchantSite {
             } else if (domain.contains("saksfifthavenue")){
                 productMainElement = "div.pa-product-large";
                 specificImageElement = "img.pa-product-large";
-                specificDescElement = "div.product-text p.product-description";
+                specificDescElement = "div.product-text a";
                 specificPriceElement = "div.product-text";
                 imageAttribute = "src";
                 targetUrlAttribute = "href";

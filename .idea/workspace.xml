@@ -67,7 +67,7 @@
       <file leaf-file-name="GetProductsInfoFromMerchantSite.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="252" column="16" selection-start="12339" selection-end="12339" vertical-scroll-proportion="0.70951587" vertical-offset="3672" max-vertical-offset="5168">
+            <state line="271" column="0" selection-start="13472" selection-end="13472" vertical-scroll-proportion="0.05175292" vertical-offset="4389" max-vertical-offset="5168">
               <folding />
             </state>
           </provider>
@@ -99,8 +99,8 @@
         <option value="$PROJECT_DIR$/src/test/java/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/Utils.java" />
         <option value="$PROJECT_DIR$/src/test/java/GetProductsInfoAeropostale.java" />
-        <option value="$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java" />
       </list>
     </option>
   </component>
@@ -417,7 +417,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -733,7 +733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GetProductsInfoFromMerchantSite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="16" selection-start="12339" selection-end="12339" vertical-scroll-proportion="0.70951587" vertical-offset="3672" max-vertical-offset="5168">
+        <state line="271" column="0" selection-start="13472" selection-end="13472" vertical-scroll-proportion="0.05175292" vertical-offset="4389" max-vertical-offset="5168">
           <folding />
         </state>
       </provider>
