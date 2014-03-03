@@ -21,9 +21,9 @@ public class GetProductsInfoFromMerchantSite {
 
         Utils utils = new Utils();
         String file = "";
-        Boolean createNew = false;
-        file = "C:\\Personal\\ecommerce\\redtags\\ProductDataCSV\\CuratedProducts_03-02-2014_09-38-962.csv";
-        int maxPagesPerUrl = 1000;
+        Boolean createNew = true;
+        //file = "C:\\Personal\\ecommerce\\redtags\\ProductDataCSV\\CuratedProducts_03-02-2014_09-38-962.csv";
+        int maxPagesPerUrl = 2;
 
         String inpurUrlCsv = "C:\\Personal\\ecommerce\\redtags\\UrlCsvFile\\pageUrls.csv";
 
@@ -43,8 +43,9 @@ public class GetProductsInfoFromMerchantSite {
             file = utils.createFileName("C:\\Personal\\ecommerce\\redtags\\ProductDataCSV\\");
         }
         CSVWriter writer = utils.createFileWriter(file);
-        String colNames = "post_type" + "#" + "post_status" + "#" + "post_title" + "#" + "post_content" + "#" + "post_category" + "#" + "product_title" + "#" + "pro_logo" + "#" + "regular_price" + "#" + "clearance_price" + "#" + "coupons" + "#" + "target_urls" + "#" + "extra_tag_line";
-        utils.writeToCsvFile(writer, colNames);
+        String separator = "~";
+        String colNames = "post_type" + separator + "post_status" + separator + "post_title" + separator + "post_content" + separator + "post_category" + separator + "product_title" + separator + "pro_logo" + separator + "regular_price" + separator + "clearance_price" + separator + "coupons" + separator + "target_urls" + separator + "extra_tag_line";
+        utils.writeToCsvFile(writer, colNames, separator);
 
         for (int i = 0; i < clearancePagesUrls.size(); i++){
             // web elements
@@ -92,6 +93,7 @@ public class GetProductsInfoFromMerchantSite {
                 specificPriceElement = "div.product-info";
                 imageAttribute = "src";
                 targetUrlAttribute = "href";
+                paginationElement = "li a.next-set";
                 domain = "Kohl's";
             } else if (domain.contains("aeropostale")){
                 productMainElement = "div[data-product-id]";
@@ -108,7 +110,70 @@ public class GetProductsInfoFromMerchantSite {
                 specificPriceElement = "div.info";
                 imageAttribute = "data-original";
                 targetUrlAttribute = "href";
+                paginationElement = "li.next";
                 domain = "Nordstrom";
+            } else if (domain.equals("hm")){
+                productMainElement = "ul[id='list-products'] > li";
+                specificImageElement = "div.image img:nth-of-type(1)";
+                specificDescElement = "div a";
+                specificPriceElement = "span.price";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                paginationElement = "li.next";
+                domain = "H & M";
+            } else if (domain.contains("urbanoutfitters")){
+                productMainElement = "div.category-product";
+                specificImageElement = "img";
+                specificDescElement = "h2";
+                specificPriceElement = "h3";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                paginationElement = "span.category-pagination-pages a";
+                domain = "Urban Outfitters";
+            } else if (domain.contains("express")){
+                productMainElement = "div.cat-thu-product";
+                specificImageElement = "img.cat-thu-p-ima";
+                specificDescElement = "li.cat-cat-prod-name";
+                specificPriceElement = "span.cat-glo-tex-oldP";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                paginationElement = "a[title='next']";
+                domain = "Express";
+            } else if (domain.contains("saksfifthavenue")){
+                productMainElement = "div.pa-product-large";
+                specificImageElement = "img.pa-product-large";
+                specificDescElement = "div.product-text p.product-description";
+                specificPriceElement = "div.product-text";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                paginationElement = "img[alt='next']";
+                domain = "Saks 5th Avenue";
+            } else if (domain.contains("bloomingdales")){
+                productMainElement = "div.productThumbnail";
+                specificImageElement = "img.thumbnailImage";
+                specificDescElement = "div.shortDescription a";
+                specificPriceElement = "div.priceSale";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                paginationElement = "li.nextArrow a";
+                domain = "Bloomingdales";
+            } else if (domain.contains("neimanmarcus")){
+                productMainElement = "div.product";
+                specificImageElement = "img";
+                specificDescElement = "div.productname";
+                specificPriceElement = "div.allpricing";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                paginationElement = "div.pagingSlide";
+                domain = "Neiman Marcus";
+            } else if (domain.contains("thelimited")){
+                productMainElement = "div.product";
+                specificImageElement = "img";
+                specificDescElement = "div.name a";
+                specificPriceElement = "div.price";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                domain = "The Limited";
             } else if (domain.contains("oldnavy") || domain.contains("gap") || domain.contains("bananarepublic") || domain.contains("piperlime") || domain.contains("athleta")){
                 productMainElement = "li.productCatItem";
                 specificImageElement = "img";
@@ -116,6 +181,7 @@ public class GetProductsInfoFromMerchantSite {
                 specificPriceElement = "span.priceDisplay";
                 imageAttribute = "productimagepath";
                 targetUrlAttribute = "href";
+                paginationElement = "a.paginatorForwardArrow";
                 if (domain.contains("oldnavy")){
                     domain = "Old Navy";
                 } else if (domain.contains("gap")){
@@ -184,10 +250,10 @@ public class GetProductsInfoFromMerchantSite {
                 System.out.println(j + ". Target URL: " + targetUrl);
 
                 bothPrices = utils.returnPrices(prices);
-                rowString = "post" + "#" + "publish" + "#" + desc + "#" + " " + "#" + category + "#" + desc + "#" + imageUrl + "#" + bothPrices[0] + "#" + bothPrices[1] + "#" + coupon + "#" + targetUrl + "#" + domain;
+                rowString = "post" + separator + "publish" + separator + desc + separator + " " + separator + category + separator + desc + separator + imageUrl + separator + bothPrices[0] + separator + bothPrices[1] + separator + coupon + separator + targetUrl + separator + domain;
                 // write to CSV file if desc is not empty
                 if (desc != ""){
-                    utils.writeToCsvFile(writer, rowString);
+                    utils.writeToCsvFile(writer, rowString, separator);
                 }
                 // keep count of total products parsed
                 totalProductsParsed++;

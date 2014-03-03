@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -45,9 +46,9 @@ public class Utils {
     }
 
 
-    public void writeToCsvFile (CSVWriter writer, String rowString){
+    public void writeToCsvFile (CSVWriter writer, String rowString, String seperator){
 
-        String [] row = rowString.split("#");
+        String [] row = rowString.split(seperator);
         writer.writeNext(row);
 
     }
@@ -92,17 +93,13 @@ public class Utils {
 
         }
         int priceArrayLength = totalPrices.size();
-        if (priceArrayLength > 2){
-            prices[1] = totalPrices.get(priceArrayLength - 1);
-            prices[0] = totalPrices.get(priceArrayLength - 2);
-            return prices;
-        } else if (priceArrayLength == 2){
-            prices[1] = totalPrices.get(1);
-            prices[0] = totalPrices.get(0);
+        if (priceArrayLength >= 2){
+            prices[1] = Collections.min(totalPrices);
+            prices[0] = Collections.max(totalPrices);
             return prices;
         } else if (priceArrayLength == 1) {
             prices[1] = totalPrices.get(0);
-            prices[0] = "00";
+            prices[0] = "XX";
             return prices;
         }
 
@@ -111,5 +108,7 @@ public class Utils {
         return prices;
 
     }
+
+
 
 }
