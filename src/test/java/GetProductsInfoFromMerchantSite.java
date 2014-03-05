@@ -66,6 +66,7 @@ public class GetProductsInfoFromMerchantSite {
             //driver = new HtmlUnitDriver();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().window().maximize();
             try{
             driver.get(pageURL);
             } catch (Exception e){
@@ -139,16 +140,48 @@ public class GetProductsInfoFromMerchantSite {
                 targetUrlAttribute = "href";
                 paginationElement = "a[title='next']";
                 domain = "Express";
-            } else if (domain.contains("saksfifthavenue")){
+            } else if (domain.contains("delias")){
+                productMainElement = "div.directoryCell";
+                specificImageElement = "div.thumbdiv img";
+                specificDescElement = "div.thumbheader a";
+                specificPriceElement = "div.thumbInfo div:nth-of-type(5)";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                paginationElement = "div[id='topPagination'] td[align='right'] > a";
+                domain = "Delia's";
+            } else if (domain.contains("dkny")){
+                productMainElement = "li.product";
+                specificImageElement = "a.product-link img:nth-of-type(1)";
+                specificDescElement = "a.product-name";
+                specificPriceElement = "div.product-price";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                paginationElement = "li.next-page a";
+                domain = "DKNY";
+            }
+            else if (domain.contains("blair") || domain.contains("bedfordfair")){
+                productMainElement = "div.Quicklook";
+                specificImageElement = "div.image-display img";
+                specificDescElement = "div.display-text a";
+                specificPriceElement = "div.display-price";
+                imageAttribute = "src";
+                targetUrlAttribute = "href";
+                paginationElement = "span.paginationBlockLink a";
+                if (domain.contains("blair")){
+                    domain = "Blair";
+                } else if (domain.contains("bedfordfair")){
+                    domain = "Bedford Fair";
+                }
+            } /* else if (domain.contains("saksfifthavenue")){
                 productMainElement = "div.pa-product-large";
                 specificImageElement = "img.pa-product-large";
                 specificDescElement = "div.product-text a";
                 specificPriceElement = "div.product-text";
                 imageAttribute = "src";
                 targetUrlAttribute = "href";
-                paginationElement = "img[alt='next']";
+                paginationElement = "li a.next";
                 domain = "Saks 5th Avenue";
-            } else if (domain.contains("bloomingdales")){
+            } */  else if (domain.contains("bloomingdales")){
                 productMainElement = "div.productThumbnail";
                 specificImageElement = "img.thumbnailImage";
                 specificDescElement = "div.shortDescription a";
@@ -253,12 +286,14 @@ public class GetProductsInfoFromMerchantSite {
                 rowString = "post" + separator + "publish" + separator + desc + separator + " " + separator + category + separator + desc + separator + imageUrl + separator + bothPrices[0] + separator + bothPrices[1] + separator + coupon + separator + targetUrl + separator + domain;
                 // write to CSV file if desc is not empty
                 if (desc != ""){
-                    utils.writeToCsvFile(writer, rowString, separator);
+                    if (!imageUrl.endsWith("gif")){
+                        utils.writeToCsvFile(writer, rowString, separator);
+                    }
                 }
                 // keep count of total products parsed
                 totalProductsParsed++;
                 Boolean needPage = true;
-                if (paginationElement != ""){
+                if (j == noOfProductsDisplayed - 1 && paginationElement != ""){
                     try{
                     paginationArrow = driver.findElement(By.cssSelector(paginationElement));
                     } catch (Exception e){
@@ -266,9 +301,10 @@ public class GetProductsInfoFromMerchantSite {
                         needPage = false;
                     }
 
-                    if (j == noOfProductsDisplayed - 1 && needPage && maxNoOfPagesPerUrl != maxPagesPerUrl){
+                    if (needPage && maxNoOfPagesPerUrl != maxPagesPerUrl){
                         if (paginationArrow.isEnabled()){
                             maxNoOfPagesPerUrl++;
+                            
                             paginationArrow.click();
                             Thread.sleep(5000);
                             productElements = getAllDisplayedProductElements(driver, productMainElement);
